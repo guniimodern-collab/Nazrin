@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nazrin Asadova | Sayt və portfolio istədiyin dizaynda</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F4F2FB;--grid:#E3DFF3;--ink:#1D1B3A;--muted:#5C5878;--card:#FFFFFF;--line:#CFC9E8;--accent:#E8501A;--ok:#0E8A4A;--code:#14122B;--codetx:#E9E6FF;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#15132B;--grid:#201D3F;--ink:#EFEDFF;--muted:#A9A4CC;--card:#1E1B3A;--line:#363261;--accent:#FF7B47;--ok:#3DD68C;--code:#0E0C20;--codetx:#E9E6FF}}
+:root[data-theme="dark"]{--bg:#15132B;--grid:#201D3F;--ink:#EFEDFF;--muted:#A9A4CC;--card:#1E1B3A;--line:#363261;--accent:#FF7B47;--ok:#3DD68C;--code:#0E0C20;--codetx:#E9E6FF}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background-color:var(--bg);background-image:radial-gradient(circle at 12% 8%,rgba(232,80,26,.12),transparent 38%),radial-gradient(circle at 92% 22%,rgba(124,92,255,.13),transparent 42%),radial-gradient(circle at 20% 92%,rgba(20,200,150,.10),transparent 40%),linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:auto,auto,auto,28px 28px,28px 28px;background-attachment:fixed;color:var(--ink);font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.6;font-size:17px}
+main{max-width:860px;margin:0 auto;padding:48px 20px 64px}
+h1{font-size:clamp(2.2rem,6.5vw,3.8rem);line-height:1.05;font-weight:800;margin:0 0 14px;letter-spacing:-.02em}
+h2{display:inline-block;font-size:1.6rem;margin:56px 0 16px -6px;padding:0 6px;font-weight:800;background-image:linear-gradient(transparent 62%,rgba(232,80,26,.2) 62%)}
+p{margin:0 0 14px;max-width:62ch;color:var(--muted)}
+.lead{font-size:1.15rem;color:var(--ink)}
+.who{font-weight:600;color:var(--muted);margin:0 0 10px}
+.mono{font-family:"JetBrains Mono",ui-monospace,monospace}
+.req{margin-top:32px;border:2px solid var(--ink);border-radius:10px;overflow:hidden;background:var(--code);color:var(--codetx);box-shadow:6px 6px 0 var(--accent)}
+.bar{display:flex;gap:10px;align-items:center;padding:10px 14px;background:var(--card);color:var(--ink);border-bottom:2px solid var(--ink);font-size:.85rem;flex-wrap:wrap}
+.get{background:var(--ok);color:#fff;padding:2px 8px;border-radius:4px;font-weight:600}
+.status{margin-left:auto;color:var(--ok);font-weight:600}
+pre{margin:0;padding:16px 18px;overflow-x:auto;font-size:.88rem;line-height:1.7}
+.k{color:#9DB7FF}.s{color:#7EE2A8}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.box{background:var(--card);border:2px solid var(--line);border-top:6px solid var(--accent);border-radius:10px;padding:18px}
+.grid .box:nth-child(3n+2){border-top-color:#7C5CFF}
+.grid .box:nth-child(3n+3){border-top-color:#14C896}
+.box h3{margin:0 0 6px;font-size:1.1rem}
+.box p{margin:0;font-size:.95rem}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:12px;counter-reset:s}
+.steps li{counter-increment:s;background:var(--card);border:2px solid var(--line);border-radius:10px;padding:14px 18px 14px 58px;position:relative;color:var(--muted)}
+.steps li::before{content:counter(s);position:absolute;left:14px;top:12px;width:30px;height:30px;border-radius:50%;background:var(--accent);color:#fff;font-weight:800;display:grid;place-items:center}
+.steps b{color:var(--ink)}
+.work{background:var(--card);border:2px solid var(--line);border-radius:10px;overflow:hidden}
+.pv{height:150px;padding:16px;display:flex;flex-direction:column;gap:8px;justify-content:center}
+.pv i{display:block;height:10px;border-radius:5px;opacity:.85}
+.pv b{display:block;height:22px;width:60%;border-radius:5px}
+.work div+div{padding:14px 16px}
+.work h3{margin:0 0 2px;font-size:1.05rem}
+.work p{margin:0;font-size:.9rem}
+.cta{margin-top:56px;background:var(--card);border:2px solid var(--ink);border-radius:12px;padding:28px 22px;box-shadow:6px 6px 0 var(--accent)}
+.cta h2{margin-top:0;background:none;padding:0;margin-left:0}
+.links{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+.btn{display:inline-block;padding:12px 22px;border-radius:8px;border:2px solid var(--ink);background:var(--card);color:var(--ink);font-weight:600;text-decoration:none}
+.btn.main{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn:focus-visible,a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+footer{margin-top:40px;color:var(--muted);font-size:.9rem}
+</style>
+</head>
+<body>
+<main>
+  <p class="who">Nazrin Asadova, backend developer</p>
+  <h1>Sayt və portfolio, istədiyin dizaynda</h1>
+  <p class="lead">Sənin üçün işlək sayt hazırlayıram: portfolio, şəxsi sayt və ya biznes saytı. Dizaynı sən seçirsən, mən telefonda və kompüterdə düzgün işləyən nəticə təhvil verirəm.</p>
+  <div class="links">
+    <a class="btn main" href="https://t.me/Asaddliinazrin?text=Salam%21%20Sayt%20sifari%C5%9F%20etm%C9%99k%20ist%C9%99yir%C9%99m." target="_blank" rel="noopener">Sayt sifariş et</a>
+    <a class="btn" href="https://instagram.com/nazriiinn4" target="_blank" rel="noopener">Instagram: @nazriiinn4</a>
+  </div>
+
+  <div class="req mono" role="img" aria-label="Postman tipli sorğu və cavab nümunəsi">
+    <div class="bar"><span class="get">GET</span><span>/sifaris</span><span class="status">200 OK</span></div>
+<pre>{
+  <span class="k">"xidmət"</span>: [<span class="s">"portfolio"</span>, <span class="s">"şəxsi sayt"</span>, <span class="s">"biznes sayt"</span>],
+  <span class="k">"dizayn"</span>: <span class="s">"sənin istədiyin kimi"</span>,
+  <span class="k">"texnologiya"</span>: [<span class="s">"MongoDB"</span>, <span class="s">"GitHub"</span>, <span class="s">"Postman"</span>],
+  <span class="k">"təhvil"</span>: <span class="s">"işlək sayt"</span>
+}</pre>
+  </div>
+
+  <h2>Xidmətlər</h2>
+  <div class="grid">
+    <div class="box"><h3>Portfolio saytı</h3><p>Özünü, işlərini və əlaqəni bir səhifədə göstər. Telefonda və kompüterdə düzgün açılır.</p></div>
+    <div class="box"><h3>Şəxsi sayt</h3><p>Tanıtım, CV və linklərin bir yerdə. Bio-ya qoymaq üçün idealdır.</p></div>
+    <div class="box"><h3>Biznes saytı</h3><p>Məhsul və ya xidmətin üçün sadə, sürətli sayt. Sifariş və əlaqə düymələri ilə.</p></div>
+  </div>
+
+  <h2>Necə işləyir</h2>
+  <ol class="steps">
+    <li><b>Yaz:</b> Telegram-da nə istədiyini və hansı üslubu bəyəndiyini göndər.</li>
+    <li><b>Razılaş:</b> Dizayn, rənglər və məzmun barədə birlikdə qərar veririk.</li>
+    <li><b>Hazırlayıram:</b> Sayt hazırlanır, sən yoxlayıb düzəlişlərini deyirsən.</li>
+    <li><b>Təhvil:</b> İşlək saytı və linki alırsan.</li>
+  </ol>
+
+  <h2>Nümunə dizaynlar</h2>
+  <p>Eyni sayt müxtəlif üslublarda belə görünə bilər. Sən istədiyin üslubu seç.</p>
+  <div class="grid">
+    <div class="work"><div class="pv" style="background:#FFFFFF"><b style="background:#1D1B3A"></b><i style="background:#CFC9E8;width:90%"></i><i style="background:#CFC9E8;width:70%"></i><i style="background:#E8501A;width:30%"></i></div><div><h3>Sadə və təmiz</h3><p>Ağ fon, böyük başlıq, az element.</p></div></div>
+    <div class="work"><div class="pv" style="background:#0E0C20"><b style="background:#7EE2A8"></b><i style="background:#363261;width:90%"></i><i style="background:#363261;width:70%"></i><i style="background:#9DB7FF;width:30%"></i></div><div><h3>Qaranlıq texnoloji</h3><p>Developerlər üçün kod üslubu.</p></div></div>
+    <div class="work"><div class="pv" style="background:#FFE3D6"><b style="background:#C2410C"></b><i style="background:#F4A582;width:90%"></i><i style="background:#F4A582;width:70%"></i><i style="background:#7C2D12;width:30%"></i></div><div><h3>Rəngarəng və canlı</h3><p>Yaradıcı sahələr və şəxsi brend üçün.</p></div></div>
+  </div>
+
+  <h2>Niyə mən</h2>
+  <div class="grid">
+    <div class="box"><h3>İşləyən sistem</h3><p>Sayt yalnız görünüş deyil. Arxa tərəfi (API, MongoDB) də qura bilirəm.</p></div>
+    <div class="box"><h3>Sənin dizaynın</h3><p>Hazır şablon yox, sənin fikrinə uyğun hazırlıq.</p></div>
+    <div class="box"><h3>Telefona uyğun</h3><p>Sayt kiçik ekranda da rahat açılır.</p></div>
+  </div>
+
+  <div class="cta">
+    <h2>Saytını hazırlayaq</h2>
+    <p>Qiymət saytın həcminə görə dəyişir. Nə istədiyini yaz, təklif göndərim.</p>
+    <div class="links">
+      <a class="btn main" href="https://t.me/Asaddliinazrin?text=Salam%21%20Sayt%20sifari%C5%9F%20etm%C9%99k%20ist%C9%99yir%C9%99m." target="_blank" rel="noopener">Telegram-da yaz</a>
+      <a class="btn" href="https://instagram.com/nazriiinn4" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </div>
+
+  <footer>© Nazrin Asadova</footer>
+</main>
+</body>
+</html>
